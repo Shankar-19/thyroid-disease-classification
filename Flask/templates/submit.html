@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>Submit</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/submit.css') }}">
+	<style>
+		#wrapper {
+			background-image : url("{{ url_for('static', filename='img/submitPage-bg.jpg') }}")
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper"></div>
+
+	<div id="result-box">
+		<div id="result-text">
+			<h1>result</h1>
+			<p>Based on the given input, it predicts Thyroid diesease for your body condition is {{ result }} </p>
+		</div>
+	</div>
+
+	<!-- <h1>{{ result }}</h1> -->
+</body>
+
+
+</html>

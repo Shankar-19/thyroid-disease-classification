@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/form.css') }}">
+	
+	<style>
+		#box1 {
+			background-image : url("{{ url_for('static', filename='img/formPage-bg.jpg') }}")
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<main>
+		<div id="box1">
+			<h1>Thyroid <br>Disease<br> Classification</h1>
+		</div>
+
+		<div id="box2">
+			<form action="/submit" method="POST">
+
+				<div class="form-group">
+					<label for="goitre">goitre</label>
+					<select name="goitre" id="goitre">
+						<option value="0">Male</option>
+						<option value="1">Female</option>
+					</select>
+				</div>
+
+
+				<div class="form-group">
+					<label for="tumor">tumor</label>
+					<select name="tumor" id="tumor">
+						<option value="0">Male</option>
+						<option value="1">Female</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="hypopituitary">hypopituitary</label>
+					<select name="hypopituitary" id="hypopituitary">
+						<option value="0">Male</option>
+						<option value="1">Female</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="psych">psych</label>
+					<select name="psych" id="psych">
+						<option value="0">Male</option>
+						<option value="1">Female</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="TSH">TSH</label>
+					<input type="text" name="TSH" id="TSH" placeholder="TSH">
+				</div>
+
+				<div class="form-group">
+					<label for="T3">T3</label>
+					<input type="text" name="T3" id="T3" placeholder="T3">
+				</div>
+
+				<div class="form-group">
+					<label for="TT4">TT4</label>
+					<input type="text" name="TT4" id="TT4" placeholder="TT4">
+				</div>
+
+				<div class="form-group">
+					<label for="T4U">T4U</label>
+					<input type="text" name="T4U" id="T4U" placeholder="T4U">
+				</div>
+
+				<div class="form-group">
+					<label for="FTI">FTI</label>
+					<input type="text" name="FTI" id="FTI" placeholder="FTI">
+				</div>
+
+				<div class="form-group">
+					<label for="TBG">TBG</label>
+					<input type="text" name="TBG" id="TBG" placeholder="TBG">
+				</div>
+
+				<div class="form-group">
+					<button type="submit" id="submit-btn">submit</button>
+				</div>
+
+			</form>
+		</div>
+	</main>
+
+</body>
+</html>

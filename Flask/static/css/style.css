@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto Mono', monospace;
+}
+
+img {
+	max-width: 100%;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: -1;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#wrapper::after {
+	content: "";
+	width: 100%;
+	height: 100vh;
+	display: block;
+	position: absolute;
+	background-color: black;
+	opacity: 0.75;
+}
+
+#title-container {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	color: white;
+}
+
+#title-container div {
+	width: 80%;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -25%);
+	text-align: center;
+}
+
+#title-container h1 {
+	font-family: 'Titan One', cursive;
+	font-size: 72px;
+	color: #B1B2FF;
+	font-weight: normal;
+}
+
+#predict-btn {
+	width: 250px;
+	padding: 10px;
+	cursor: pointer;
+	background-color: #7FCD91;
+	font-size: 18px;
+	font-family: 'Roboto Mono', monospace;
+	margin: 50px 0;
+	border: 2px solid #111;
+	position: relative;
+	border-radius: 10px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: white;
+	font-weight: bold;
+}
+
+#predict-btn::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 250px;
+	height: 48px;
+	background-color: white;
+	left: 7px;
+	top: 7px;
+	z-index: -1;
+	border-radius: 10px;
+	transition: .2s ease-out;
+}
+
+#predict-btn:hover::after {
+	left: -1px;
+	top: -2px;
+}
+
+/* ============= */
+
+.section {
+	width: 100%;
+	display: flex;
+	padding: 100px 0;
+}
+
+.box1, .box2 {
+	height: 500px;
+	flex: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 100px;
+}
+
+.box2 p{
+	margin: 20px 0;
+}
+
+.section img {
+	transition: all .5s;
+}
+
+.section img:hover {
+	transform: scale(1.2);
+}
+
+footer {
+	width: 100%;
+	height: 150px;
+	background-color: #2C3333;
+}

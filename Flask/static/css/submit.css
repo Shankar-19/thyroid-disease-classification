@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: white;
+	font-family: 'Roboto Mono', monospace;
+}
+
+/* ===== hero image ===== */
+#wrapper {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: -1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#wrapper::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+	opacity: 0.25;
+}
+
+#result-box {
+	width: 300px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url("../img/result-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid #635985;
+	border-radius: 5px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+
+#result-text {
+	margin-top: 420px;
+	padding: 20px 10px;
+	transition: all .5s ease;
+	height: 250px;
+}
+
+#result-text::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 250px;
+	display: block;
+	top: 420px;
+	left: 0;
+	z-index: -1;
+	transition: all .5s ease;
+}
+
+#result-box h1 {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-family: 'Titan One', cursive;
+}
+
+#result-box:hover #result-text {
+	margin-top: 250px;
+}
+
+#result-box:hover #result-text::after {
+	opacity: .75;
+	background-color: black;
+	top: 250px;
+}
